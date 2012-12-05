@@ -30,10 +30,10 @@ else{
 		echo "w=1/sqrt(L*C)=1/sqrt($L*$C)=$w cps</br></br>";
 	echo "Rezonancia frekvencia</br>";
 		$fr=$w/(2*Pi());
-		echo "fr=w/(2*Pi)=$w/(2*Pi)=$fr fok</br></br>";
+		echo "fr=w/(2*Pi)=$w/(2*Pi)=$fr Hz</br></br>";
 	echo "Körjóság</br>";
-		$Q0=1/($R*sqrt($L/$C));
-		echo "Q0=1/(R*sqrt)(L/C)=1/($R*sqrt($L/$C))=$Q0</br></br>";
+		$Q0=(1/$R)*(sqrt($L/$C));
+		echo "Q0=(1/R)*(sqrt(L/C))=(1/$R)*(sqrt($L/$C))=$Q0</br></br>";
 	echo "Sávszélesség</br>";
 		$B=$fr/$Q0;
 		echo "B=fr/Q0=$fr/$Q0=$B Hz</br></br>";
@@ -43,6 +43,9 @@ else{
 	echo "Kondenzátor reaktanciája</br>";
 		$Xc0=1/($w*$C);
 		echo "Xc0=1/(w*C)=1/($w*$C)=$Xc0 Ohm</br></br>";
+	echo "Kondenzátoron eső feszültség rezonancián</br>";
+		$Uc0=$U*$Q0;
+		echo "Uc0=U*Q0=$U*$Q0=$Uc0 V</br></br>";
 	
 }
 ?>
