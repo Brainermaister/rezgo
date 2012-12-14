@@ -65,14 +65,14 @@ else{
 	echo "Rezonancia körfrekvencia</br>";
 		$w=1/sqrt($L*$C);
 		$ertekW=normal($w);
-		echo "ω=1/sqrt(L*C)=1/sqrt(",$_POST['L'],ex($lm),"*",$_POST['C'],ex($cm),")=$ertekW[0] $ertekW[1]cps</br></br>";
+		echo "ω=1/√(L*C)=1/√(",$_POST['L'],ex($lm),"*",$_POST['C'],ex($cm),")=$ertekW[0] $ertekW[1]cps</br></br>";
 	echo "Rezonancia frekvencia</br>";
 		$fr=$w/(2*Pi());
 		$ertekFR=normal($fr);
 		echo "f<sub>r</sub>=ω/(2*Pi)=$ertekW[0]$ertekW[2]/(2*Pi)=$ertekFR[0] $ertekFR[1]Hz</br></br>";
 	echo "Körjóság</br>";
 		$Q0=(1/$R)*(sqrt($L/$C));
-		echo "Q<sub>0</sub>=(1/R)*(sqrt(L/C))=(1/",$_POST['R'],ex($rm),")*(sqrt(",$_POST['L'],ex($lm),"/",$_POST['C'],ex($cm),"))=",round($Q0,2),"</br></br>";
+		echo "Q<sub>0</sub>=(1/R)*√(L/C)=(1/",$_POST['R'],ex($rm),")*√(",$_POST['L'],ex($lm),"/",$_POST['C'],ex($cm),")=",round($Q0,2),"</br></br>";
 	echo "Sávszélesség</br>";
 		$B=$fr/$Q0;
 		$ertekB=normal($B);
